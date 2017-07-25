@@ -1,0 +1,6 @@
+@import "~/node_modules/bootstrap/dist/bootstrap.css";
+
+.full-width{
+  max-width: 500px;
+  width: 100%;
+}

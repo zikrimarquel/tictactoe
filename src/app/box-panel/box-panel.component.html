@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<h3 [hidden]="gameOver">Turn: {{ turn | uppercase}} Player</h3>
+<div class="alert alert-success" role="alert" *ngIf="gameOver">
+  <h3>Winner: {{ winner | uppercase }}
+    <h3 *ngIf="!isDraw()" style="display: inline;"> Player</h3>
+    <h3 *ngIf="isDraw()" style="display: inline;"> Draw</h3>
+  </h3>
+</div>
+
+<app-box [icon]="icons.a" [isClicked]="iconCheck(icons.a)" (click)="icons.a = this.turn; onBoxClick()"></app-box>
+<app-box [icon]="icons.b" [isClicked]="iconCheck(icons.b)" (click)="icons.b = this.turn; onBoxClick()"></app-box>
+<app-box [icon]="icons.c" [isClicked]="iconCheck(icons.c)" (click)="icons.c = this.turn; onBoxClick()"></app-box>
+<br />
+<br />
+<app-box [icon]="icons.d" [isClicked]="iconCheck(icons.d)" (click)="icons.d = this.turn; onBoxClick()"></app-box>
+<app-box [icon]="icons.e" [isClicked]="iconCheck(icons.e)" (click)="icons.e = this.turn; onBoxClick()"></app-box>
+<app-box [icon]="icons.f" [isClicked]="iconCheck(icons.f)" (click)="icons.f = this.turn; onBoxClick()"></app-box>
+<br />
+<br />
+<app-box [icon]="icons.g" [isClicked]="iconCheck(icons.g)" (click)="icons.g = this.turn; onBoxClick()"></app-box>
+<app-box [icon]="icons.h" [isClicked]="iconCheck(icons.h)" (click)="icons.h = this.turn; onBoxClick()"></app-box>
+<app-box [icon]="icons.i" [isClicked]="iconCheck(icons.i)" (click)="icons.i = this.turn; onBoxClick()"></app-box>
+<br />
+<br />
+<button class="btn btn-primary full-width" (click)="newGame()">New Game</button>

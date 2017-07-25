@@ -1,0 +1,7 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+body {
+  max-width: 500px;
+  width: 50%;
+  margin: auto;
+}
